@@ -1,7 +1,16 @@
 
 # Welcome to your CDK Python project!
 
-This is a simple cdk project for Python development with CDK.
+[What is AWS CDK?](https://docs.aws.amazon.com/cdk/latest/guide/home.html)
+[AWS CDK in python](https://docs.aws.amazon.com/cdk/api/latest/python/index.html)
+
+## AWS CDK and Python : Deploy a s3 bucket
+
+mkdir step-00-hello-cdk 
+
+cd step-00-hello-cdk
+
+cdk init app --language python
 
 The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
