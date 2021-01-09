@@ -48,17 +48,20 @@ them to your `setup.py` file and rerun the `pip install -r requirements.txt`
 command.
 
 ## app.py
+```
 $ install_requires = [
         "aws-cdk.core",
         "aws-cdk.aws_s3"
     ],
-    
+```
+
 after adding service run pip install -r requirements.txt
 
 then edit 
 
 ## step_00_hello_cdk_stack.py :
-from aws_cdk import (
+```
+$ from aws_cdk import (
      core, 
      aws_s3 as s3
    )
@@ -72,6 +75,7 @@ class Step00HelloCdkStack(core.Stack):
         Bucket = s3.Bucket(self,'Python-cdk-step-00',
                   versioned=True,
                   bucket_name = 'step00-hello-cdk-python')//bucket_name is optional
+```
 
 At this point you can now synthesize the CloudFormation template for this code.
 
