@@ -24,7 +24,7 @@ you can create the virtualenv manually.
 To manually create a virtualenv on MacOS and Linux:
 
 ```
-$ python3 -m venv .venv
+$ python3 -m venv .venv (use sudo in case of permission only for linux users)
 ```
 
 After the init process completes and the virtualenv is created, you can use the following
@@ -42,27 +42,22 @@ If you are a Windows platform, you would activate the virtualenv like this:
 
 Once the virtualenv is activated, you can install the required dependencies.
 
-$  
-
-$ pip install -r requirements.txt
-
 
 To add additional dependencies, for example other CDK libraries, just add
 them to your `setup.py` file and rerun the `pip install -r requirements.txt`
 command.
-## app.py
 
-   install_requires = [
+## app.py
+$ install_requires = [
         "aws-cdk.core",
         "aws-cdk.aws_s3"
     ],
     
-from aws_cdk import (
-     core, 
-     aws_s3 as s3
-   )
+after adding service run pip install -r requirements.txt
 
-## step_00_hello_cdk_stack.py ADD this:
+then edit 
+
+## step_00_hello_cdk_stack.py :
 from aws_cdk import (
      core, 
      aws_s3 as s3
@@ -81,12 +76,19 @@ class Step00HelloCdkStack(core.Stack):
 At this point you can now synthesize the CloudFormation template for this code.
 
 ```
-$ cdk synth
+$ cdk synth (optional)
+
 ```
 
-To add additional dependencies, for example other CDK libraries, just add
-them to your `setup.py` file and rerun the `pip install -r requirements.txt`
-command.
+```
+$ cdk deploy
+
+```
+
+```
+$ cdk destroy (must)
+
+```
 
 ## Useful commands
 
