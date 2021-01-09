@@ -42,25 +42,41 @@ If you are a Windows platform, you would activate the virtualenv like this:
 
 Once the virtualenv is activated, you can install the required dependencies.
 
-##  app.py 
-$    install_requires= [
-$        "aws-cdk.core",
-$        "aws-cdk.aws_s3" //write services manually like that and follow the next steps 
-$     ],
+$  
 
 $ pip install -r requirements.txt
 
 
-## step_00_hello_cdk_stack.py ADD this:
+To add additional dependencies, for example other CDK libraries, just add
+them to your `setup.py` file and rerun the `pip install -r requirements.txt`
+command.
+## app.py
 
-from aws_cdk import (core, aws_s3 as s3)
-$class Step00HelloCdkStack(core.Stack):
-$
-$    def __init__(self, scope: core.Construct, construct_id: str, **kwargs) -> None:
-$        super().__init__(scope, construct_id, **kwargs)
-$        # The code that defines your stack goes here
-$        # Here we define our first bucket
-$        Bucket = s3.Bucket(self,'Python-cdk-step-00',versioned=True,bucket_name = 'step00-hello-cdk-python')//nucket_name is optional
+   install_requires = [
+        "aws-cdk.core",
+        "aws-cdk.aws_s3"
+    ],
+    
+from aws_cdk import (
+     core, 
+     aws_s3 as s3
+   )
+
+## step_00_hello_cdk_stack.py ADD this:
+from aws_cdk import (
+     core, 
+     aws_s3 as s3
+   )
+   
+class Step00HelloCdkStack(core.Stack):
+
+    def __init__(self, scope: core.Construct, construct_id: str, **kwargs) -> None:
+        super().__init__(scope, construct_id, **kwargs)
+        
+        # The code that defines your stack goes here
+        Bucket = s3.Bucket(self,'Python-cdk-step-00',
+                  versioned=True,
+                  bucket_name = 'step00-hello-cdk-python')//bucket_name is optional
 
 At this point you can now synthesize the CloudFormation template for this code.
 
