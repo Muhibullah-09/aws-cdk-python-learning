@@ -4,6 +4,11 @@
 [What is AWS CDK?](https://docs.aws.amazon.com/cdk/latest/guide/home.html)
 [AWS CDK in python](https://docs.aws.amazon.com/cdk/api/latest/python/index.html)
 
+## Setup cdk with python
+
+
+[Working with cdk with python](https://docs.aws.amazon.com/cdk/latest/guide/work-with-cdk-python.html)
+
 ## AWS CDK and Python : Deploy a s3 bucket
 
 mkdir step-00-hello-cdk 
@@ -58,6 +63,11 @@ install_requires = [
 after adding service in app.py run:
 ```
 pip install -r requirements.txt
+```
+## Another way to install services
+```
+pip install aws-cdk.aws_s3
+
 ```
 
 then edit 
