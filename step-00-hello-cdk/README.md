@@ -58,10 +58,11 @@ source .venv/bin/activate
 .env\Scripts\activate.bat
 ```
 
-Now that the virtual environment is activated, you can safely install the required python modules.
+
 
 ## Step 6
 ```
+Now that the virtual environment is activated, you can safely install the required python modules.
 pip install -r requirements.txt
 ```
 
@@ -71,7 +72,7 @@ command.
 
 ## Step 7
 ```
-in app.py :
+in setup.py :
 
 install_requires = [
         "aws-cdk.core",
@@ -79,10 +80,10 @@ install_requires = [
     ],
 ```
 
-after adding service in app.py run:
-
 ## Step 8
 ```
+after adding service in setup.py run:
+
 pip install -r requirements.txt
 ```
 
