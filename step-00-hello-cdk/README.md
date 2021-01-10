@@ -32,16 +32,13 @@ The init script we ran in the last step created a bunch of code to help get us s
 
 
 ## Step 3
-```
 To manually create a virtualenv on MacOS and Linux:
-
-python3 -m venv .venv (use sudo in case of permission only for linux users)
 ```
-
-
+python3 -m venv .venv
 ```
+(use sudo in case of permission only for linux users)
 If you are a Windows platform, you would activate the virtualenv like this:
-
+```
 % .venv\Scripts\activate.bat
 ```
 
@@ -61,9 +58,8 @@ source .venv/bin/activate
 ```
 
 ## Step 6
-```
 Now that the virtual environment is activated, you can safely install the required python modules.
-
+```
 pip install -r requirements.txt
 ```
 
@@ -72,9 +68,8 @@ them to your `setup.py` file and rerun the `pip install -r requirements.txt`
 command.
 
 ## Step 7
-```
 in setup.py :
-
+```
 install_requires = [
         "aws-cdk.core",
         "aws-cdk.aws_s3"
@@ -82,16 +77,14 @@ install_requires = [
 ```
 
 ## Step 8
-```
 after adding service in setup.py run:
-
+```
 pip install -r requirements.txt
 ```
 
 ## Step 9
-```
 then edit step_00_hello_cdk_stack.py :
-
+```
 from aws_cdk import (
      core, 
      aws_s3 as s3
@@ -108,9 +101,8 @@ class Step00HelloCdkStack(core.Stack):
                   bucket_name = 'step00-hello-cdk-python')//bucket_name is optional
 ```
 
-At this point you can now synthesize the CloudFormation template for this code.
-
 ## Step 10
+At this point you can now synthesize the CloudFormation template for this code.
 ```
 cdk synth (optional)
 ```
@@ -122,6 +114,11 @@ cdk deploy
 ## Step 12
 ```
 cdk destroy (must)
+```
+## Step 13
+If you want to deactivate the vartual enviroment write this command in the terminal of your project
+```
+deactivate
 ```
 
 Enjoy!
