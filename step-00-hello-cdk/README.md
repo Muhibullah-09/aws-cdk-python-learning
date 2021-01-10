@@ -29,17 +29,19 @@ The init script we ran in the last step created a bunch of code to help get us s
 ## [Virtual Environments and Packages](https://docs.python.org/3/tutorial/venv.html#virtual-environments-and-packages)
 
 
-## To manually create a virtualenv on MacOS and Linux:
+
 
 ## Step 3
 ```
+To manually create a virtualenv on MacOS and Linux:
+
 python3 -m venv .venv (use sudo in case of permission only for linux users)
 ```
 
-If you are a Windows platform, you would activate the virtualenv like this:
-
 
 ```
+If you are a Windows platform, you would activate the virtualenv like this:
+
 % .venv\Scripts\activate.bat
 ```
 
@@ -57,8 +59,6 @@ source .venv/bin/activate
 ```
 .env\Scripts\activate.bat
 ```
-
-
 
 ## Step 6
 ```
