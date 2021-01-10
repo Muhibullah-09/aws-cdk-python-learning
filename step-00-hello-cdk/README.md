@@ -1,6 +1,3 @@
-
-# Welcome to your CDK Python project!
-
 [What is AWS CDK?](https://docs.aws.amazon.com/cdk/latest/guide/home.html)
 [AWS CDK in python](https://docs.aws.amazon.com/cdk/api/latest/python/index.html)
 
@@ -9,51 +6,73 @@
 
 [Working with cdk with python](https://docs.aws.amazon.com/cdk/latest/guide/work-with-cdk-python.html)
 
-## AWS CDK and Python : Deploy a s3 bucket
+## AWS CDK and Python 
 
+## Step 1
+```
 mkdir step-00-hello-cdk 
+```
 
+## Step 2
+```
 cd step-00-hello-cdk
+```
 
+## Step 3
+```
 cdk init app --language python
+```
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+# Activating the Virtualenv
+The init script we ran in the last step created a bunch of code to help get us started but it also created a virtual environment within our directory. If you haven’t used virtualenv before, you can find out more here but the bottom line is that they allow you have a self-contained, isolated environment to run Python and install arbitrary packages without polluting your system Python.
 
-This project is set up like a standard Python project.  The initialization
-process also creates a virtualenv within this project, stored under the `.venv`
-directory.  To create the virtualenv it assumes that there is a `python3`
-(or `python` for Windows) executable in your path with access to the `venv`
-package. If for any reason the automatic creation of the virtualenv fails,
-you can create the virtualenv manually.
+## [Virtual Environments and Packages](https://docs.python.org/3/tutorial/venv.html#virtual-environments-and-packages)
 
-To manually create a virtualenv on MacOS and Linux:
 
+## To manually create a virtualenv on MacOS and Linux:
+
+## Step 3
 ```
 python3 -m venv .venv (use sudo in case of permission only for linux users)
 ```
 
-After the init process completes and the virtualenv is created, you can use the following
-step to activate your virtualenv.
-
-```
-source .venv/bin/activate
-```
-
 If you are a Windows platform, you would activate the virtualenv like this:
+
 
 ```
 % .venv\Scripts\activate.bat
 ```
 
-Once the virtualenv is activated, you can install the required dependencies.
+After the init process completes and the virtualenv is created, you can use the following
+step to activate your virtualenv.
 
+## Step 4
+```
+source .venv/bin/activate
+```
 
-To add additional dependencies, for example other CDK libraries, just add
+## One a Windows platform, you would use this:
+
+## Step 5
+```
+.env\Scripts\activate.bat
+```
+
+Now that the virtual environment is activated, you can safely install the required python modules.
+
+## Step 6
+```
+pip install -r requirements.txt
+```
+
+Once the virtualenv is activated, you can install the required dependencies.To add additional dependencies, for example other CDK libraries, just add
 them to your `setup.py` file and rerun the `pip install -r requirements.txt`
 command.
 
-## app.py
+## Step 7
 ```
+in app.py :
+
 install_requires = [
         "aws-cdk.core",
         "aws-cdk.aws_s3"
@@ -61,19 +80,16 @@ install_requires = [
 ```
 
 after adding service in app.py run:
+
+## Step 8
 ```
 pip install -r requirements.txt
 ```
-## Another way to install services
-```
-pip install aws-cdk.aws_s3
 
+## Step 9
 ```
+then edit step_00_hello_cdk_stack.py :
 
-then edit 
-
-## step_00_hello_cdk_stack.py :
-```
 from aws_cdk import (
      core, 
      aws_s3 as s3
@@ -92,27 +108,18 @@ class Step00HelloCdkStack(core.Stack):
 
 At this point you can now synthesize the CloudFormation template for this code.
 
+## Step 10
 ```
 cdk synth (optional)
-
 ```
 
+## Step 11
 ```
 cdk deploy
-
 ```
-
+## Step 12
 ```
 cdk destroy (must)
-
 ```
-
-## Useful commands
-
- * `cdk ls`          list all stacks in the app
- * `cdk synth`       emits the synthesized CloudFormation template
- * `cdk deploy`      deploy this stack to your default AWS account/region
- * `cdk diff`        compare deployed stack with current state
- * `cdk docs`        open CDK documentation
 
 Enjoy!
