@@ -127,9 +127,8 @@ pip install -r requirements.txt
 ```
 
 ## Step 14
+then edit step_01_hello_lambda_stack.py:
 ```
-then edit step_01_hello_lambda_stack.py :
-
 from aws_cdk import (
     core,
     aws_lambda as _lambda,
@@ -175,7 +174,7 @@ cdk deploy
 ```
 Get the URL from the output and test it using curl or paste the url in browser:
 
-(https://xxxxxx.execute-api.us-east-2.amazonaws.com/prod/)
+https://xxxxxx.execute-api.us-east-2.amazonaws.com/prod/
 ```
 
 ## Step 18
