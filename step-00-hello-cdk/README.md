@@ -4,7 +4,7 @@
 [What is AWS CDK?](https://docs.aws.amazon.com/cdk/latest/guide/home.html)
 [AWS CDK in python](https://docs.aws.amazon.com/cdk/api/latest/python/index.html)
 
-## Setup cdk with python
+## Setup cdk with python (overview)
 
 
 [Working with cdk with python](https://docs.aws.amazon.com/cdk/latest/guide/work-with-cdk-python.html)
