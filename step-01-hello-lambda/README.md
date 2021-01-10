@@ -175,5 +175,10 @@ https://xxxxxx.execute-api.us-east-2.amazonaws.com/prod/
 ```
 cdk destroy (must)
 ```
+## Step 19
+If you want to deactivate the vartual enviroment write this command in the terminal of your project
+```
+deactivate
+```
 
 Enjoy!
