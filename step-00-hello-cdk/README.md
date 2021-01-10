@@ -63,6 +63,7 @@ source .venv/bin/activate
 ## Step 6
 ```
 Now that the virtual environment is activated, you can safely install the required python modules.
+
 pip install -r requirements.txt
 ```
 
