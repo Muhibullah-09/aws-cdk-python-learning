@@ -39,7 +39,6 @@ Now that the virtual environment is activated, you can safely install the requir
 
 pip install -r requirements.txt
 ```
-
 Once the virtualenv is activated, you can install the required dependencies.To add additional dependencies, for example other CDK libraries, just add
 them to your `setup.py` file and rerun the `pip install -r requirements.txt`
 command.
@@ -61,9 +60,9 @@ def handler(event, context):
     }
 ```
 ## Step 8
-```
 in setup.py :
 
+```
     install_requires=[
         "aws-cdk.core",
         "aws-cdk.aws-lambda"
@@ -71,16 +70,14 @@ in setup.py :
 ```
 
 ## Step 9
-```
 after adding service in setup.py run:
-
+```
 pip install -r requirements.txt
 ```
 
 ## Step 10
-```
 then edit step_01_hello_lambda_stack.py :
-
+```
 from aws_cdk import (
     core,
     aws_lambda as _lambda,
@@ -107,7 +104,7 @@ cdk deploy
 ```
 
 Now test the function in AWS Lambda Console (make sure you are in the correct region):
-(https://console.aws.amazon.com/lambda/home#/functions)
+https://console.aws.amazon.com/lambda/home#/functions
 
 
 ## Next step is to add an API Gateway in front of our function. Install the dependency: 
