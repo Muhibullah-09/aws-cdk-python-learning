@@ -65,7 +65,7 @@ command.
 in setup.py :
 ```
 install_requires = [
-        "aws-cdk.core",
+        "aws-cdk.core = latest version",
         "aws-cdk.aws_s3"
     ],
 ```
