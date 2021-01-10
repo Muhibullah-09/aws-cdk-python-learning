@@ -19,24 +19,21 @@ cdk init app --language python
 ```
 
 ## Step 4
-```
 After the init process completes and the virtualenv is created, you can use the following
 step to activate your virtualenv.
-
+```
 source .venv/bin/activate
 ```
 
 ## Step 5
-```
 One a Windows platform, you would use this:
-
+```
 .env\Scripts\activate.bat
 ```
 
 ## Step 6
-```
 Now that the virtual environment is activated, you can safely install the required python modules.
-
+```
 pip install -r requirements.txt
 ```
 Once the virtualenv is activated, you can install the required dependencies.To add additional dependencies, for example other CDK libraries, just add
@@ -109,9 +106,8 @@ https://console.aws.amazon.com/lambda/home#/functions
 
 ## Next step is to add an API Gateway in front of our function. Install the dependency: 
 ## Step 12
-```
 in setup.py :
-
+```
     install_requires=[
         "aws-cdk.core",
         "aws-cdk-aws_apigateway",
@@ -120,9 +116,8 @@ in setup.py :
 ```
 
 ## Step 13
-```
 after adding service in setup.py run:
-
+```
 pip install -r requirements.txt
 ```
 
@@ -164,16 +159,15 @@ cdk synth (optional)
 
 
 ## Step 16
-deploy again
+Deploy again
 
 ```
 cdk deploy
 ```
 
 ## Step 17
-```
 Get the URL from the output and test it using curl or paste the url in browser:
-
+```
 https://xxxxxx.execute-api.us-east-2.amazonaws.com/prod/
 ```
 
